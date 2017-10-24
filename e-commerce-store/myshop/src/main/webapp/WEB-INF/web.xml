@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
+  <display-name>myshop</display-name>
+  	<welcome-file-list>
+  		<welcome-file>index.jsp</welcome-file>
+  	</welcome-file-list>
+  
+  	
+  	<filter>
+		<filter-name>springSecurityFilterChain</filter-name>  	
+  		<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+  	</filter>
+  	
+  	<filter-mapping>
+  		<filter-name>springSecurityFilterChain</filter-name>
+  		<url-pattern>/*</url-pattern>
+  	</filter-mapping>
+
+	<!-- Bootstraps the root web application context before servlet initialization -->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	
+	<!-- needed for ContextLoaderListener -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>/WEB-INF/spring/security-config.xml</param-value>
+	</context-param>
+
+	<!-- The front controller of this Spring Web application, responsible for handling all application requests -->
+	<servlet>
+		<servlet-name>springDispatcherServlet</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>/WEB-INF/spring/springDispatcherServlet-servlet.xml</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<!-- Map all requests to the DispatcherServlet for handling -->
+	<servlet-mapping>
+		<servlet-name>springDispatcherServlet</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+	
+	<mime-mapping>
+    <extension>eot</extension>
+    <mime-type>application/vnd.ms-fontobject</mime-type>
+</mime-mapping>
+
+<mime-mapping>
+    <extension>otf</extension>
+    <mime-type>font/opentype</mime-type>
+</mime-mapping>
+
+<mime-mapping>
+    <extension>ttf</extension>
+    <mime-type>font/truetype</mime-type>
+</mime-mapping>
+
+<mime-mapping>
+    <extension>woff</extension>
+    <mime-type>application/font-woff </mime-type>
+</mime-mapping>
+	
+	
+</web-app>

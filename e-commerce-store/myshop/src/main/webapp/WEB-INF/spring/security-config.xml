@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns="http://www.springframework.org/schema/security"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd">
+
+
+	<http auto-config="true" use-expressions="true">
+		<intercept-url pattern="/resources/**" access="permitAll" requires-channel="https"/>
+		<intercept-url pattern="/login" access="permitAll" requires-channel="https"/>
+		<intercept-url pattern="/loginFailed" access="permitAll" requires-channel="https"/>
+		<intercept-url pattern="/logout" access="permitAll" requires-channel="https"/>
+		<intercept-url pattern="/403" access="permitAll" requires-channel="https"/>
+		<intercept-url pattern="/**" access="hasRole('ROLE_USER')" requires-channel="https"/>
+		<form-login login-page="/login" authentication-failure-url="/loginFailed"/>
+		<logout logout-success-url="/logout"/>
+		<access-denied-handler error-page="/403"/>
+	</http>
+
+	<authentication-manager>
+		<authentication-provider>
+			<password-encoder hash="bcrypt" />
+			<jdbc-user-service data-source-ref="dataSource" />
+		</authentication-provider>
+	</authentication-manager>
+
+	<beans:bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<beans:property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<beans:property name="url"
+			value="jdbc:mysql://localhost:3306/myshopdb" />
+		<beans:property name="username" value="myshopdb" />
+		<beans:property name="password" value="myshopdb" />
+	</beans:bean>
+
+
+
+</beans:beans>

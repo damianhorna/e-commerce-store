@@ -1,0 +1,263 @@
+/*!
+ * Start Bootstrap - Shop Homepage (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+body {
+	padding-top: 70px;
+	/* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+
+.slide-image {
+	width: 100%;
+}
+
+.error{
+	color:#d9534f;
+	size: 10px;
+}
+
+.required{
+	color: #d9534f;
+}
+
+.carousel-holder {
+	margin-bottom: 30px;
+}
+
+.carousel-control, .item {
+	border-radius: 4px;
+}
+
+.caption {
+	height: 130px;
+	overflow: hidden;
+}
+
+.delete-icon:hover {
+	color: #c8423e;
+	cursor: pointer;
+	-ms-filter:
+		"progid:DXImageTransform.Microsoft.Shadow(Strength=24, Direction=63, Color=#FF0000)";
+	/*IE 8*/
+	text-shadow: 0px 6px 24px #FF0000;
+	/* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=24, Direction=135,
+		Color=#FF0000); /*IE 5.5-7*/
+}
+
+.edit-icon:hover {
+	color: #317ab9;
+	cursor: pointer;
+	-ms-filter:
+		"progid:DXImageTransform.Microsoft.Shadow(Strength=24, Direction=50, Color=#428BCA)";
+	/*IE 8*/
+	text-shadow: 0px 6px 24px #428BCA;
+	/* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=24, Direction=135,
+		Color=#428BCA); /*IE 5.5-7*/
+}
+
+.caption h4 {
+	white-space: nowrap;
+}
+
+.thumbnail img {
+	width: 100%;
+}
+
+.ratings {
+	padding-right: 10px;
+	padding-left: 10px;
+	color: #d17581;
+}
+
+.thumbnail {
+	padding: 0;
+}
+
+.thumbnail .caption-full {
+	padding: 9px;
+	color: #333;
+}
+
+footer {
+	margin: 50px 0;
+}
+
+#myshop {
+	font-size: 24px;
+	letter-spacing: 2px;
+}
+
+#search-query {
+	width: 100%;
+}
+
+.color-danger {
+	color: #d9534f;
+}
+
+.color-primary {
+	color: #428bca;
+}
+
+.badge-danger {
+	background: #d9534f;
+	position: relative;
+	top: 6px;
+	left: -2px;
+	display: inline-block;
+	padding: 0.1em 0.2em;
+	font-size: 10px;
+	font-weight: normal;
+	line-height: 1;
+	color: #fff;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: baseline;
+	border-radius: 0.40rem;
+}
+
+.font-bold {
+	font-weight: bold;
+}
+
+.item-for-sale {
+	border: 1px solid #ddd;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0
+		rgba(0, 0, 0, 0.19);
+	border-radius: 5px;
+	margin: 10px;
+	padding: 10px;
+}
+
+.item-in-cart {
+	border: 1px solid #ddd;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0
+		rgba(0, 0, 0, 0.19);
+	border-radius: 5px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px;
+	width: 540px;
+}
+
+.background-danger {
+	background-color: #d9534f;
+}
+
+th {
+	text-align: center;
+	color: #eee;
+}
+
+.item-for-sale:hover {
+	-moz-box-shadow: inset 0 0 20px #aaa;
+	-webkit-box-shadow: inset 0 0 20px #aaa;
+	box-shadow: inset 0 0 20px #aaa;
+	background-color: #eeeffee;
+	cursor: pointer;
+}
+
+.item-in-cart:hover {
+	-moz-box-shadow: inset 0 0 20px #aaa;
+	-webkit-box-shadow: inset 0 0 20px #aaa;
+	box-shadow: inset 0 0 20px #aaa;
+	background-color: #eeeffee;
+	cursor: pointer;
+}
+
+.label-price {
+	font-size: 14px;
+	font-weight: normal;
+}
+
+#items-holder {
+	min-height: 70vh;
+}
+
+#item-view-operations {
+	background-color: #eee;
+	min-height: 300px;
+	border-radius: 6px;
+	position: relative;
+}
+
+#item-view-wrapper {
+	position: absolute;
+	bottom: 3px;
+	left: 0;
+	right: 0;
+	text-align: center;
+}
+
+#item-view-inner {
+	margin: 0 auto;
+}
+
+#available-items {
+	color: #888;
+	font-size: 14px;
+}
+
+#item-view-quantity-input {
+	border-radius: 5px;
+	height: 30px;
+}
+
+#item-view-quantity-input:focus {
+	outline: none;
+}
+
+#item-view-info {
+	min-height: 100%;
+	padding: 10px;
+	font-size: 16px;
+	line-height: 1cm;
+	padding-top: 20px;
+}
+
+#item-view-description {
+	background-color: #eee;
+	margin-top: 3px;
+	border-radius: 6px;
+	min-height: 30vh;
+}
+
+#from-category {
+	margin-bottom: 20px;
+}
+
+.pic-for-sale {
+	width: 150px;
+	height: 150px;
+}
+
+.min-hght {
+	min-height: 70vh;
+}
+
+@media ( min-width : 576px) {
+	#search-query {
+		width: 100%;
+	}
+}
+
+@media ( min-width : 768px) {
+	#search-query {
+		width: 220px;
+	}
+}
+
+@media ( min-width : 992px) {
+	#search-query {
+		width: 276px;;
+	}
+}
+
+@media ( min-width : 1200px) {
+	#search-query {
+		width: 376px;
+	}
+}
