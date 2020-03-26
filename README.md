@@ -18,3 +18,7 @@ Listing:
 Item view:
 
 ![item-view](screenshots/item-view2.png)
+
+Cart:
+
+![cart](screenshots/cart.png)
