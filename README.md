@@ -1,7 +1,7 @@
 A project of an online store. 
 Technologies: Spring MVC, Spring Security, Hibernate, Bootstrap, Ehcache, Jquery AJAX.
 
-Some screenshots from the store:
+Some screenshots from the store:these are the photos that gave you knowledge about my website 
 
 Log in:
 
